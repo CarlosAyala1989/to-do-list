@@ -106,3 +106,22 @@ Qué validan:
 El reporte en formato Markdown está en:
 
 - `REPORTE-RESULTADOS.md`
+
+## Despliegue en GitHub Pages
+
+Este repositorio ya incluye el workflow:
+
+- `.github/workflows/deploy-pages.yml`
+
+Qué hace:
+
+1. Se ejecuta en cada `push` a `main` (y también manualmente).
+2. Publica automáticamente la web en GitHub Pages.
+
+Para activarlo en GitHub:
+
+1. Ir a `Settings` del repositorio.
+2. Entrar en `Pages`.
+3. En `Build and deployment`, elegir `Source: GitHub Actions`.
+
+Después de eso, cada push a `main` actualiza la página publicada.
