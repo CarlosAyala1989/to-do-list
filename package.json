@@ -1,0 +1,30 @@
+{
+  "name": "to-do-list",
+  "version": "1.0.0",
+  "description": "Gestor de Tareas Simplificado con pruebas unitarias e integración",
+  "main": "src/todo.js",
+  "scripts": {
+    "start": "npx http-server . -p 3000 -c-1",
+    "test": "npm run test:unit && npm run test:integration",
+    "test:unit": "jest tests/unit --runInBand",
+    "test:integration": "playwright test",
+    "install:browsers": "npx playwright install chromium"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarlosAyala1989/to-do-list.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/CarlosAyala1989/to-do-list/issues"
+  },
+  "homepage": "https://github.com/CarlosAyala1989/to-do-list#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "http-server": "^14.1.1",
+    "jest": "^30.3.0"
+  }
+}

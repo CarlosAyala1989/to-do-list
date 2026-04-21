@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestor de Tareas Simplificado</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="board">
+      <header class="hero">
+        <p class="eyebrow">Proyecto Clásico</p>
+        <h1>Gestor de Tareas Simplificado</h1>
+        <p class="subtitle">Agrega tareas y márcalas como completadas en segundos.</p>
+      </header>
+
+      <section class="panel">
+        <form id="task-form" class="task-form" novalidate>
+          <label for="task-title">Nueva tarea</label>
+          <div class="form-row">
+            <input
+              id="task-title"
+              data-testid="task-input"
+              name="task-title"
+              type="text"
+              placeholder="Ej: Comprar leche"
+              autocomplete="off"
+            />
+            <button id="add-task" data-testid="save-task-button" type="submit">Guardar</button>
+          </div>
+          <p id="error-message" class="error" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="lists-grid" aria-label="Listas de tareas">
+        <article class="panel">
+          <h2>Pendientes</h2>
+          <ul id="pending-list" data-testid="pending-list" class="task-list"></ul>
+        </article>
+
+        <article class="panel">
+          <h2>Completadas</h2>
+          <ul id="completed-list" data-testid="completed-list" class="task-list"></ul>
+        </article>
+      </section>
+    </main>
+
+    <script src="src/todo.js"></script>
+    <script src="src/app.js"></script>
+  </body>
+</html>
